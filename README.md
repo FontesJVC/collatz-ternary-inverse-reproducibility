@@ -1,5 +1,7 @@
 # Computational Reproducibility for the Collatz Companion Papers
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22715986.svg)](https://doi.org/10.5281/zenodo.22715986)
+
 This repository contains computational verification scripts, adversarial
 counterexample searches, execution logs, and reproducibility materials for two
 companion manuscripts on the accelerated odd Collatz inverse map.
@@ -17,8 +19,9 @@ separated:
 - **Paper 2:** see [`paper2/`](paper2/README.md), together with the shared
   utilities and the deeper stress tests in [`deep_audit/`](deep_audit/README.md).
 
-The exact manuscript-associated snapshots will be archived as separate Zenodo
-releases/tags so that each paper can cite its own immutable version DOI.
+The exact computational package corresponding to the companion manuscripts is
+archived jointly on Zenodo at
+[https://doi.org/10.5281/zenodo.22715986](https://doi.org/10.5281/zenodo.22715986).
 
 ## Repository layout
 
@@ -80,12 +83,9 @@ Passing these tests is finite computational evidence only and is not a proof.
 ## GitHub and Zenodo versioning
 
 GitHub hosts the current development version. The manuscript-associated
-snapshots are intended to be released separately, for example:
-
-- `paper1-v1.0.0`
-- `paper2-v1.0.0`
-
-Each release can be archived by Zenodo and cited through its version DOI.
+computational package is archived jointly for both companion papers on Zenodo.
+The archived release is permanently citable at
+[https://doi.org/10.5281/zenodo.22715986](https://doi.org/10.5281/zenodo.22715986).
 
 ## AI-use disclosure
 
