@@ -23,6 +23,24 @@ def rep_mod3pow(x: int, exp: int) -> int:
     return x % (3 ** exp)
 
 
+def b_t_from_unit(y: int, t: int) -> int:
+    """Return the unique base exponent b in {1,...,6} for inverse family t.
+
+    It is enough that y be a unit modulo 3.  The exponent is characterized by
+        2^b y == 1 + 3t (mod 9).
+    """
+    if t not in D:
+        raise ValueError("t must be 0, 1, or 2")
+    if y % 3 == 0:
+        raise ValueError("y must be a unit modulo 3")
+    target = (1 + 3 * t) % 9
+    yy = y % 9
+    for b in range(1, 7):
+        if (pow(2, b, 9) * yy) % 9 == target:
+            return b
+    raise AssertionError("No base exponent found")
+
+
 def odd_collatz_T(n: int) -> Tuple[int, int]:
     if n <= 0 or n % 2 == 0:
         raise ValueError("n must be positive odd")
