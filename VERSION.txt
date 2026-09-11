@@ -1,4 +1,4 @@
 Supplementary Reproducibility Package v1
-Version: 1.0.1
+Version: 1.0.2
 Date: 2026-09-11
-DOI: 10.5281/zenodo.22715986
+Status: corrected exact-arithmetic release candidate
