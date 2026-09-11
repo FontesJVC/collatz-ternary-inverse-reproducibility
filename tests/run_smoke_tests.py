@@ -4,7 +4,12 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 from shared.common import h_star
 from paper1.paper1_core import minimal_graph, indegrees, is_strongly_connected
-from paper2.paper2_core import valuation_isometry_holds, smallest_uniform_terminal_horizon, forward_exact_path_from_one
+from paper2.paper2_core import (
+    valuation_isometry_holds,
+    smallest_uniform_terminal_horizon,
+    forward_exact_path_from_one,
+    no_wrap_bound_holds,
+)
 
 print('Running smoke tests...')
 
@@ -24,6 +29,13 @@ for y in (1,5,7,11,13):
 # Target-only horizon examples
 assert smallest_uniform_terminal_horizon(35) == h_star(35) == 4
 assert smallest_uniform_terminal_horizon(27) == h_star(27) == 4
+
+# Regression test: the no-wrap criterion must use exact integer arithmetic.
+# A floating-point implementation incorrectly returns False for this case.
+regression_n = 40850585511864587
+regression_h = 35
+assert 2 * 3 ** (2 * regression_h) - 3 * (regression_n + 1) ** 2 > 0
+assert no_wrap_bound_holds(regression_n, regression_h)
 
 # Example path 1 -> 5 -> 53 -> 35 (reverse reduced odd trajectory of 35)
 path35 = forward_exact_path_from_one(35)
