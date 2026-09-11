@@ -2,18 +2,7 @@
 from __future__ import annotations
 
 from typing import Dict, List, Set, Tuple
-from shared.common import D, INTERIOR_T
-
-
-def b_t_from_unit(y: int, t: int) -> int:
-    if y % 3 == 0:
-        raise ValueError("y must be a unit modulo 3")
-    target = (1 + 3 * t) % 9
-    yy = y % 9
-    for b in range(1, 7):
-        if (pow(2, b, 9) * yy) % 9 == target:
-            return b
-    raise AssertionError("No base exponent found")
+from shared.common import D, INTERIOR_T, b_t_from_unit
 
 
 def phi_min(h: int, r: int, k: int, t: int) -> int:
@@ -56,6 +45,7 @@ def is_strongly_connected(G: Dict[int, Set[int]]) -> bool:
     if not G:
         return True
     start = next(iter(G))
+
     def dfs(graph, s):
         seen = set()
         stack = [s]
@@ -66,6 +56,7 @@ def is_strongly_connected(G: Dict[int, Set[int]]) -> bool:
             seen.add(u)
             stack.extend(graph[u] - seen)
         return seen
+
     seen1 = dfs(G, start)
     if len(seen1) != len(G):
         return False
