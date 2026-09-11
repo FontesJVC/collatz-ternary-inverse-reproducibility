@@ -1,2 +1,13 @@
+Supplementary Reproducibility Package v1.0.2
+2026-09-11
+
 Running smoke tests...
 All smoke tests passed.
+
+Regression check included:
+  h = 35
+  n = 40850585511864587
+  2*3^(2h) - 3*(n+1)^2 = 253111194626942466 > 0
+  no_wrap_bound_holds(n,h) = True
+
+The no-wrap predicate uses exact integer arithmetic in v1.0.2.
