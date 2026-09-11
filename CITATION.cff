@@ -1,14 +1,16 @@
 cff-version: 1.2.0
-message: "If you use this software, please cite the archived Zenodo release and the associated manuscript."
+message: "If you use this software, please cite the archived Zenodo release and the associated companion manuscripts."
 title: "Computational Reproducibility for the Collatz Companion Papers"
 type: software
 authors:
   - family-names: "Fontes"
     given-names: "João Vitor de Carvalho"
     affiliation: "Department of Mechanical Engineering, Federal University of Paraná"
-version: "1.0.0"
+version: "1.0.1"
 date-released: "2026-09-11"
+doi: "10.5281/zenodo.22715986"
 repository-code: "https://github.com/FontesJVC/collatz-ternary-inverse-reproducibility"
+url: "https://doi.org/10.5281/zenodo.22715986"
 license: MIT
 keywords:
   - Collatz conjecture
