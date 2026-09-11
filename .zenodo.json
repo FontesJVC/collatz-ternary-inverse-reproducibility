@@ -1,0 +1,22 @@
+{
+  "title": "Computational Reproducibility for the Collatz Companion Papers",
+  "upload_type": "software",
+  "description": "Computational verification scripts, adversarial counterexample searches, execution logs, and reproducibility materials associated with two companion manuscripts on ternary residual geometry and exact inverse-path realization for the accelerated odd Collatz map. The computations are separate falsification and reproducibility checks and do not replace the analytic proofs.",
+  "creators": [
+    {
+      "name": "Fontes, João Vitor de Carvalho",
+      "affiliation": "Department of Mechanical Engineering, Federal University of Paraná"
+    }
+  ],
+  "version": "1.0.0",
+  "publication_date": "2026-09-11",
+  "license": "MIT",
+  "keywords": [
+    "Collatz conjecture",
+    "accelerated odd Collatz map",
+    "inverse dynamics",
+    "3-adic dynamics",
+    "computational mathematics",
+    "reproducibility"
+  ]
+}
