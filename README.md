@@ -1,13 +1,18 @@
 # Computational Reproducibility for the Collatz Companion Papers
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22715986.svg)](https://doi.org/10.5281/zenodo.22715986)
-
 This repository contains computational verification scripts, adversarial
 counterexample searches, execution logs, and reproducibility materials for two
 companion manuscripts on the accelerated odd Collatz inverse map.
 
 The computational material is a **separate falsification and reproducibility
 layer**. It does not replace the analytic proofs in the manuscripts.
+
+> **Version note.** The previously archived Zenodo release `v1.0.1`
+> (DOI: `10.5281/zenodo.22715986`) is superseded for the final manuscripts by
+> the corrected `v1.0.2` code on `main`. Version `v1.0.2` replaces one
+> floating-point comparison in a convenience no-wrap predicate by an exact
+> integer comparison and removes an organizational Paper 2 -> Paper 1 code
+> dependency. The mathematical statements and analytic proofs are unchanged.
 
 ## Which files belong to which paper?
 
@@ -18,10 +23,6 @@ separated:
   arithmetic/audit utilities in [`shared/`](shared/README.md).
 - **Paper 2:** see [`paper2/`](paper2/README.md), together with the shared
   utilities and the deeper stress tests in [`deep_audit/`](deep_audit/README.md).
-
-The exact computational package corresponding to the companion manuscripts is
-archived jointly on Zenodo at
-[https://doi.org/10.5281/zenodo.22715986](https://doi.org/10.5281/zenodo.22715986).
 
 ## Repository layout
 
@@ -82,10 +83,14 @@ Passing these tests is finite computational evidence only and is not a proof.
 
 ## GitHub and Zenodo versioning
 
-GitHub hosts the current development version. The manuscript-associated
-computational package is archived jointly for both companion papers on Zenodo.
-The archived release is permanently citable at
-[https://doi.org/10.5281/zenodo.22715986](https://doi.org/10.5281/zenodo.22715986).
+GitHub hosts the current development version. The corrected manuscript-associated
+snapshot is prepared as `v1.0.2` and should be archived jointly for both
+companion papers on Zenodo. After Zenodo mints the `v1.0.2` DOI, that DOI will
+replace the superseded `v1.0.1` DOI in the final manuscripts and citation
+metadata.
+
+See [`RELEASE_NOTES_v1.0.2.md`](RELEASE_NOTES_v1.0.2.md) for the exact scope of
+the correction.
 
 ## AI-use disclosure
 
