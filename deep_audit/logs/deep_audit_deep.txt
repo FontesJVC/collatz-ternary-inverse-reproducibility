@@ -1,0 +1,103 @@
+
+========================================================================================
+DEEP COMPUTATIONAL AUDIT — preset=deep
+========================================================================================
+This is finite falsification work, not a mathematical proof.
+Configuration:
+  order_N = 14
+  theorem_A_s = 5
+  theorem_A_m = 101
+  theorem_B_h = 4
+  min_graph_h = 4
+  refinement_h = 3
+  fiber_h4_samples = 250
+  kappa_trials = 50000
+  path_trials = 10000
+  path_depth = 40
+  path_q = 2
+  target_max = 199
+  target_radius = 2
+  hard_limit = 199
+  hard_top = 12
+  hard_extra = 3
+  hard_cap = 55
+  below_max = 99
+  below_radius = 2
+  state_cap = 5000000
+
+--- Higher-range exact structural checks ---
+
+[TEST] order of 64 modulo 3^N
+  OK for N=2,...,14
+
+[TEST] Theorem A: residual affinity
+  OK on 1020 (s,h,m) blocks, with every u in each block
+
+[TEST] Theorem B: state classification
+  h=1: OK, 6 distinct states
+  h=2: OK, 54 distinct states
+  h=3: OK, 486 distinct states
+  h=4: OK, 4374 distinct states
+
+[TEST] q=0 subsystem: degree 6 and strong connectivity
+  h=1: OK (6 vertices, degree 6, strongly connected)
+  h=2: OK (54 vertices, degree 6, strongly connected)
+  h=3: OK (486 vertices, degree 6, strongly connected)
+  h=4: OK (4374 vertices, degree 6, strongly connected)
+
+[TEST] 9-to-1 refinement of the q=0 subsystem
+  h=1->h=2: OK
+  h=2->h=3: OK
+  h=3->h=4: OK
+  4914 lower edges checked
+--- completed in 292.996 s ---
+
+--- Sampled full fibers at h=4 ---
+  h=4: 250 sampled fibers passed; each fiber exhaustively enumerated over 2187 q-bar values
+--- completed in 8.121 s ---
+
+--- Random kappa-isometry stress ---
+  50000 random kappa pairs passed
+--- completed in 4.479 s ---
+
+--- Deep exact-path realization / envelope stress ---
+  10000 exact inverse paths passed; max tested depth=40, max integer bit-length=410
+--- completed in 4.777 s ---
+
+--- Broad target window sweep at h=h*(n) ---
+  progress: n=51/199, tests=119, largest direct depth=41
+  progress: n=101/199, tests=241, largest direct depth=43
+  progress: n=151/199, tests=365, largest direct depth=44
+  broad window sweep passed: 485 residual searches over 100 odd targets; largest direct depth=45; largest layer=50055; slowest=46.638s at n=171, d=47
+--- completed in 1083.141 s ---
+
+--- Every-depth sweep on the hardest targets ---
+  selected hard targets: [(171, 45), (129, 44), (199, 43), (195, 43), (193, 43), (97, 43), (147, 42), (145, 42), (73, 42), (109, 41), (55, 41), (27, 41)]
+  n=171, direct depth=45, testing all d=1..48
+  n=129, direct depth=44, testing all d=1..47
+  n=199, direct depth=43, testing all d=1..46
+  n=195, direct depth=43, testing all d=1..46
+  n=193, direct depth=43, testing all d=1..46
+  n=97, direct depth=43, testing all d=1..46
+  n=147, direct depth=42, testing all d=1..45
+  n=145, direct depth=42, testing all d=1..45
+  n=73, direct depth=42, testing all d=1..45
+  n=109, direct depth=41, testing all d=1..44
+  n=55, direct depth=41, testing all d=1..44
+  n=27, direct depth=41, testing all d=1..44
+  all-depth hard-target sweep passed: 546 residual searches
+--- completed in 1415.446 s ---
+
+--- Below-threshold adversarial scan ---
+  below-threshold scan: 236 searches; 1 residual false positives observed
+  first false-positive examples:
+    n=19, h=2, d=4, exact endpoint=181
+--- completed in 251.453 s ---
+
+========================================================================================
+DEEP AUDIT COMPLETE
+========================================================================================
+No counterexample was found in the executed tests.
+CSV results: results/deep_audit_deep.csv
+Total elapsed time: 3060.413 s
+Again: this is finite computational evidence, not a proof.

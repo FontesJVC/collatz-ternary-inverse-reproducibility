@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the archived Zenodo release and the associated manuscript."
+title: "Computational Reproducibility for the Collatz Companion Papers"
+type: software
+authors:
+  - family-names: "Fontes"
+    given-names: "João Vitor de Carvalho"
+    affiliation: "Department of Mechanical Engineering, Federal University of Paraná"
+version: "1.0.0"
+date-released: "2026-09-11"
+repository-code: "https://github.com/FontesJVC/collatz-ternary-inverse-reproducibility"
+license: MIT
+keywords:
+  - Collatz conjecture
+  - accelerated odd Collatz map
+  - inverse dynamics
+  - 3-adic dynamics
+  - computational mathematics
+  - reproducibility
+abstract: >-
+  Computational verification scripts, adversarial counterexample searches,
+  execution logs, and reproducibility materials for two companion manuscripts
+  on ternary residual geometry and exact inverse-path realization for the
+  accelerated odd Collatz map.

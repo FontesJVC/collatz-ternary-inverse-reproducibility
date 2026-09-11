@@ -1,0 +1,150 @@
+Spreadsheet runtime warmup failed during python startup
+Traceback (most recent call last):
+  File "/tmp/tmp.L2TH2Y5coc/artifact_tool_v2-2.8.22/artifact_tool/patches/warm_spreadsheet_runtime_on_startup.py", line 26, in warm_spreadsheet_runtime_on_startup
+  File "/tmp/tmp.L2TH2Y5coc/artifact_tool_v2-2.8.22/artifact_tool/spreadsheet_warmup.py", line 785, in warm_spreadsheet_runtime
+  File "/tmp/tmp.L2TH2Y5coc/artifact_tool_v2-2.8.22/artifact_tool/spreadsheet_warmup.py", line 720, in _warm_feature_flows
+  File "/tmp/tmp.L2TH2Y5coc/artifact_tool_v2-2.8.22/artifact_tool/spreadsheet_warmup.py", line 704, in _warm_collaboration_flows
+  File "/tmp/tmp.L2TH2Y5coc/artifact_tool_v2-2.8.22/artifact_tool/generated/interface/models.py", line 32317, in hydrate_crdt_from_proto
+  File "/tmp/tmp.L2TH2Y5coc/artifact_tool_v2-2.8.22/artifact_tool/rpc/remote.py", line 749, in __call__
+  File "/tmp/tmp.L2TH2Y5coc/artifact_tool_v2-2.8.22/artifact_tool/rpc/client.py", line 150, in call
+artifact_tool.rpc.client.RemoteError: hydrateCrdtFromProto requires an empty collaborative document.
+==============================================================================
+COMPUTATIONAL AUDIT — RESIDUAL/INVERSE COLLATZ STRUCTURE
+==============================================================================
+Warning: computational results do not replace mathematical proofs.
+
+[TEST] order of 64 modulo 3^N
+  OK for N=2,...,10
+
+[TEST] Theorem A: residual affinity
+  OK em 240 pares (s,h,m), com todos os u do bloco
+
+[TEST] Theorem B: state classification
+  h=1: OK, 6 estados distintos
+  h=2: OK, 54 estados distintos
+  h=3: OK, 486 estados distintos
+
+[TEST] Theorem C: q-bar parametrizes the fiber X_{h,t} exactly
+  h=1: OK (54 fibers checked exhaustively)
+  h=2: OK (486 fibers checked exhaustively)
+  h=3: OK (4374 fibers checked exhaustively)
+
+[TEST] q=0 subsystem: degree 6 and strong connectivity
+  h=1: OK (6 vertices, degree 6, strongly connected)
+  h=2: OK (54 vertices, degree 6, strongly connected)
+  h=3: OK (486 vertices, degree 6, strongly connected)
+
+[TEST] 9-to-1 refinement of the q=0 subsystem
+  h=1->h=2: OK
+  h=2->h=3: OK
+  540 arestas inferiores verificadas
+
+[TEST] q_j precision modulo 3^(N-2) in one transition
+  OK on 2000 random cases
+
+[TEST] recovery of k from the refined vertex
+  OK on 2000 random cases
+
+[TEST] finite realization / C_h(w) class on random exact trajectories
+  OK on 1500 random trajectories
+
+[TEST] Archimedean envelope on random exact paths
+  OK on 1500 random trajectories
+
+[TEST] finite-precision exactness: pruned search vs direct control
+  n=  1, h*=1, direct depth=0, tests=[(1, False), (2, False), (3, False), (4, False), (5, False), (6, False), (7, False), (8, False), (9, False), (10, False)]
+  n=  3, h*=2, direct depth=2, tests=[(1, False), (2, True), (3, False), (4, False), (5, False), (6, False), (7, False), (8, False), (9, False), (10, False)]
+  n=  5, h*=2, direct depth=1, tests=[(1, True), (2, False), (3, False), (4, False), (5, False), (6, False), (7, False), (8, False), (9, False), (10, False)]
+  n=  7, h*=3, direct depth=5, tests=[(1, False), (2, False), (3, False), (4, False), (5, True), (6, False), (7, False), (8, False), (9, False), (10, False)]
+  n=  9, h*=3, direct depth=6, tests=[(1, False), (2, False), (3, False), (4, False), (5, False), (6, True), (7, False), (8, False), (9, False), (10, False)]
+  n= 11, h*=3, direct depth=4, tests=[(1, False), (2, False), (3, False), (4, True), (5, False), (6, False), (7, False), (8, False), (9, False), (10, False)]
+  n= 13, h*=3, direct depth=2, tests=[(1, False), (2, True), (3, False), (4, False), (5, False), (6, False), (7, False), (8, False), (9, False), (10, False)]
+  n= 15, h*=3, direct depth=5, tests=[(1, False), (2, False), (3, False), (4, False), (5, True), (6, False), (7, False), (8, False), (9, False), (10, False)]
+  n= 17, h*=3, direct depth=3, tests=[(1, False), (2, False), (3, True), (4, False), (5, False), (6, False), (7, False), (8, False), (9, False), (10, False)]
+  n= 19, h*=3, direct depth=6, tests=[(1, False), (2, False), (3, False), (4, False), (5, False), (6, True), (7, False), (8, False), (9, False), (10, False)]
+  n= 21, h*=3, direct depth=1, tests=[(1, True), (2, False), (3, False), (4, False), (5, False), (6, False), (7, False), (8, False), (9, False), (10, False)]
+  n= 23, h*=4, direct depth=4, tests=[(1, False), (2, False), (3, False), (4, True), (5, False), (6, False), (7, False), (8, False), (9, False), (10, False)]
+  n= 25, h*=4, direct depth=7, tests=[(1, False), (2, False), (3, False), (4, False), (5, False), (6, False), (7, True), (8, False), (9, False), (10, False)]
+  n= 27, h*=4, direct depth=41, tests=[(1, False), (2, False), (3, False), (4, False), (5, False), (6, False), (7, False), (8, False), (9, False), (10, False)]
+  n= 29, h*=4, direct depth=5, tests=[(1, False), (2, False), (3, False), (4, False), (5, True), (6, False), (7, False), (8, False), (9, False), (10, False)]
+  n= 31, h*=4, direct depth=39, tests=[(1, False), (2, False), (3, False), (4, False), (5, False), (6, False), (7, False), (8, False), (9, False), (10, False)]
+  n= 33, h*=4, direct depth=8, tests=[(1, False), (2, False), (3, False), (4, False), (5, False), (6, False), (7, False), (8, True), (9, False), (10, False)]
+  n= 35, h*=4, direct depth=3, tests=[(1, False), (2, False), (3, True), (4, False), (5, False), (6, False), (7, False), (8, False), (9, False), (10, False)]
+  n= 37, h*=4, direct depth=6, tests=[(1, False), (2, False), (3, False), (4, False), (5, False), (6, True), (7, False), (8, False), (9, False), (10, False)]
+  n= 39, h*=4, direct depth=11, tests=[(1, False), (2, False), (3, False), (4, False), (5, False), (6, False), (7, False), (8, False), (9, False), (10, False)]
+  n= 41, h*=4, direct depth=40, tests=[(1, False), (2, False), (3, False), (4, False), (5, False), (6, False), (7, False), (8, False), (9, False), (10, False)]
+  n= 43, h*=4, direct depth=9, tests=[(1, False), (2, False), (3, False), (4, False), (5, False), (6, False), (7, False), (8, False), (9, True), (10, False)]
+  n= 45, h*=4, direct depth=4, tests=[(1, False), (2, False), (3, False), (4, True), (5, False), (6, False), (7, False), (8, False), (9, False), (10, False)]
+  n= 47, h*=4, direct depth=38, tests=[(1, False), (2, False), (3, False), (4, False), (5, False), (6, False), (7, False), (8, False), (9, False), (10, False)]
+  n= 49, h*=4, direct depth=7, tests=[(1, False), (2, False), (3, False), (4, False), (5, False), (6, False), (7, True), (8, False), (9, False), (10, False)]
+  n= 51, h*=4, direct depth=7, tests=[(1, False), (2, False), (3, False), (4, False), (5, False), (6, False), (7, True), (8, False), (9, False), (10, False)]
+  n= 53, h*=4, direct depth=2, tests=[(1, False), (2, True), (3, False), (4, False), (5, False), (6, False), (7, False), (8, False), (9, False), (10, False)]
+  n= 55, h*=4, direct depth=41, tests=[(1, False), (2, False), (3, False), (4, False), (5, False), (6, False), (7, False), (8, False), (9, False), (10, False)]
+  n= 57, h*=4, direct depth=10, tests=[(1, False), (2, False), (3, False), (4, False), (5, False), (6, False), (7, False), (8, False), (9, False), (10, True)]
+  n= 59, h*=4, direct depth=10, tests=[(1, False), (2, False), (3, False), (4, False), (5, False), (6, False), (7, False), (8, False), (9, False), (10, True)]
+  n= 61, h*=4, direct depth=5, tests=[(1, False), (2, False), (3, False), (4, False), (5, True), (6, False), (7, False), (8, False), (9, False), (10, False)]
+  n= 63, h*=4, direct depth=39, tests=[(1, False), (2, False), (3, False), (4, False), (5, False), (6, False), (7, False), (8, False), (9, False), (10, False)]
+  n= 65, h*=4, direct depth=8, tests=[(1, False), (2, False), (3, False), (4, False), (5, False), (6, False), (7, False), (8, True), (9, False), (10, False)]
+  n= 67, h*=5, direct depth=8, tests=[(1, False), (2, False), (3, False), (4, False), (5, False), (6, False), (7, False), (8, True), (9, False), (10, False)]
+  n= 69, h*=5, direct depth=3, tests=[(1, False), (2, False), (3, True), (4, False), (5, False), (6, False), (7, False), (8, False), (9, False), (10, False)]
+  n= 71, h*=5, direct depth=37, tests=[(1, False), (2, False), (3, False), (4, False), (5, False), (6, False), (7, False), (8, False), (9, False), (10, False)]
+  n= 73, h*=5, direct depth=42, tests=[(1, False), (2, False), (3, False), (4, False), (5, False), (6, False), (7, False), (8, False), (9, False), (10, False)]
+  n= 75, h*=5, direct depth=3, tests=[(1, False), (2, False), (3, True), (4, False), (5, False), (6, False), (7, False), (8, False), (9, False), (10, False)]
+  n= 77, h*=5, direct depth=6, tests=[(1, False), (2, False), (3, False), (4, False), (5, False), (6, True), (7, False), (8, False), (9, False), (10, False)]
+  n= 79, h*=5, direct depth=11, tests=[(1, False), (2, False), (3, False), (4, False), (5, False), (6, False), (7, False), (8, False), (9, False), (10, False)]
+  n= 81, h*=5, direct depth=6, tests=[(1, False), (2, False), (3, False), (4, False), (5, False), (6, True), (7, False), (8, False), (9, False), (10, False)]
+  n= 83, h*=5, direct depth=40, tests=[(1, False), (2, False), (3, False), (4, False), (5, False), (6, False), (7, False), (8, False), (9, False), (10, False)]
+  n= 85, h*=5, direct depth=1, tests=[(1, True), (2, False), (3, False), (4, False), (5, False), (6, False), (7, False), (8, False), (9, False), (10, False)]
+  n= 87, h*=5, direct depth=9, tests=[(1, False), (2, False), (3, False), (4, False), (5, False), (6, False), (7, False), (8, False), (9, True), (10, False)]
+  n= 89, h*=5, direct depth=9, tests=[(1, False), (2, False), (3, False), (4, False), (5, False), (6, False), (7, False), (8, False), (9, True), (10, False)]
+  n= 91, h*=5, direct depth=33, tests=[(1, False), (2, False), (3, False), (4, False), (5, False), (6, False), (7, False), (8, False), (9, False), (10, False)]
+  n= 93, h*=5, direct depth=4, tests=[(1, False), (2, False), (3, False), (4, True), (5, False), (6, False), (7, False), (8, False), (9, False), (10, False)]
+  n= 95, h*=5, direct depth=38, tests=[(1, False), (2, False), (3, False), (4, False), (5, False), (6, False), (7, False), (8, False), (9, False), (10, False)]
+  n= 97, h*=5, direct depth=43, tests=[(1, False), (2, False), (3, False), (4, False), (5, False), (6, False), (7, False), (8, False), (9, False), (10, False)]
+  n= 99, h*=5, direct depth=7, tests=[(1, False), (2, False), (3, False), (4, False), (5, False), (6, False), (7, True), (8, False), (9, False), (10, False)]
+  OK on the tested targets
+
+[DEMO] 1 -> 85
+  (t,q)=(1,0): 1 -> 1, exponent 2
+  (t,q)=(1,1): 1 -> 85, exponent 8
+  h=1: [1] -> [4] mod 9; 85 mod M = 4
+  h=2: [1] -> [4] mod 81; 85 mod M = 4
+  h=3: [1] -> [85] mod 729; 85 mod M = 85
+
+[DEMO] target 35
+  h used = 4; h*(35) = 4
+  M=3^(2h)=6561
+  threshold (3/2)(36)^2 = 1944
+  n=35, h=4, d=1: empty; states per layer=[1, 0]
+  n=35, h=4, d=2: empty; states per layer=[1, 1, 0]
+  n=35, h=4, d=3: NONEMPTY; states per layer=[1, 1, 2, 1]
+    witness labels (t,q): [(2, 0), (2, 0), (2, 0)]
+    integer trajectory generated by the labels: [1, 5, 53, 35]
+    -> witness is EXACT for the target.
+  n=35, h=4, d=4: empty; states per layer=[1, 2, 2, 2, 0]
+  n=35, h=4, d=5: empty; states per layer=[1, 2, 3, 2, 2, 0]
+  n=35, h=4, d=6: empty; states per layer=[1, 2, 3, 2, 2, 2, 0]
+  n=35, h=4, d=7: empty; states per layer=[1, 3, 4, 3, 2, 3, 2, 0]
+
+[DEMO] low precision may leave a false positive: n=35,d=4,h=1
+  n=35, h=1, d=4: NONEMPTY; states per layer=[1, 2, 3, 7, 1]
+    witness labels (t,q): [(1, 1), (1, 0), (1, 0), (2, 0)]
+    integer trajectory generated by the labels: [1, 85, 1813, 38677, 51569]
+    -> residual witness does NOT end exactly at the target (false positive).
+  Compare with h*=4:
+  n=35, h=4, d=4: empty; states per layer=[1, 2, 2, 2, 0]
+
+[DEMO] direct odd trajectory of 27 (control/example only)
+  reduced depth = 41
+  number of exponents = 41
+  largest observed exponent = 5
+  h*(27) = 4
+  first direct nodes: [27, 41, 31, 47, 71, 107, 161, 121, 91, 137]
+  last direct nodes:    [3077, 577, 433, 325, 61, 23, 35, 53, 5, 1]
+  are all q values in the inverse address zero? True
+  largest observed q = 0
+
+==============================================================================
+END — no counterexample was found in the executed tests.
+This is finite computational evidence, not a proof.
+==============================================================================
