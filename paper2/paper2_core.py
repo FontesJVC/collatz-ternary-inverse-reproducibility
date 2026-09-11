@@ -3,8 +3,7 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 from typing import List, Optional, Tuple
-from shared.common import D, h_star, envelope_U
-from paper1.paper1_core import b_t_from_unit
+from shared.common import D, b_t_from_unit, h_star, envelope_U
 
 
 def inverse_child(y: int, t: int, q: int) -> Tuple[int, int]:
@@ -62,7 +61,8 @@ def layered_moduli(h: int, d: int) -> List[int]:
 
 
 def no_wrap_bound_holds(n: int, h: int) -> bool:
-    return 3 ** (2 * h) > (3 * (n + 1) ** 2) / 2
+    """Test 3^(2h) > (3/2)(n+1)^2 using exact integer arithmetic."""
+    return 2 * 3 ** (2 * h) > 3 * (n + 1) ** 2
 
 
 def smallest_uniform_terminal_horizon(n: int) -> int:
